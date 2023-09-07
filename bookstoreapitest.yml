@@ -1,0 +1,22 @@
+config:
+  target: "https://demoqa.com/BookStore"
+  phases:
+    - duration: 60
+      arrivalRate: 5
+      name: Warm up
+    - duration: 120
+      arrivalRate: 5
+      rampTo: 20
+      name: Ramp up load
+    - duration: 300
+      arrivalRate: 20
+      name: Sustained load
+  payload:
+    path: "keywords.csv"
+    fields:
+      - "keyword"
+scenarios:
+  - name: "Get Books"
+    flow:
+      - get:
+          url: "https://demoqa.com/BookStore/v1/Books"
