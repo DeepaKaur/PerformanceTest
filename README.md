@@ -1,5 +1,7 @@
 # PerformanceTest
-Performance testing POC with Artillery
-Commands to run as below
+Performance testing with Artillery
+API and Web load testing POC. 
+Command to run script : 
      artillery run bookstoreapitest.yml     
+     artillery run testload.yml     
  
